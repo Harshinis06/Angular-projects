@@ -1,0 +1,11 @@
+.container{
+    /* position: relative; */
+    
+    justify-content: center;
+}
+
+.form{
+    /* width: 20rem; */
+    display:flex;
+    justify-content:center;
+}

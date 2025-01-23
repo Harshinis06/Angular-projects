@@ -1,0 +1,27 @@
+<div class="container">
+  <app-header>
+    <form class="form">
+      
+      <input class="form-control m-3" type="search" placeholder="Search"   #inputValue>
+        <input  class="btn btn-outline-success m-3" type="submit"  (click)="searchTextShow()">
+       
+      </form>
+      <p>Recipes: {{searchText}}</p>
+    <img src="../assets/images/Beef Tacos.webp"  #img>
+    
+    <img src="../assets/images/Chicken Alf.webp" #img>
+  
+    <img src="../assets/images/Mango-Smoothie.webp" #img>
+    
+    <img src="../assets/images/Pasta.webp" #img>
+    <img src="../assets/images/stirfried-vegetables.webp" #img>
+    <img src="../assets/images/speghati.webp" #img>
+  </app-header>
+
+<!-- 
+<div class="container"> -->
+  <app-recipe-list (viewDetail)="recipeDetails($event)" ></app-recipe-list>
+  <app-recipe-details [allRecipe]="recipeDetail" [selectedRecipe]="searchText">
+
+  </app-recipe-details>
+</div>
