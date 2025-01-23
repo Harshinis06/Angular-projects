@@ -1,0 +1,46 @@
+
+
+
+<nav class="navbar  navbar-expand-lg">
+ 
+    <div class="container ">
+      <a class="navbar-brand" href="#">
+        <i class="fa-solid fa-utensils"></i>
+        KitchenWhiz
+      </a>
+      <!-- <form> -->
+        
+          <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="home" [routerLinkActive]="'active'">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+  
+      </ul>
+    
+     <!-- 1. two way data binding without using ngmodel(property binding) & (event binding)
+         <input class="form-control" type="search" placeholder="Search" [value]="searchText" (input)="searchTextChange($event)"> -->
+
+     <!-- 2.two way data binding with using ngmodel(property binding) & (event binding)
+        <input class="form-control" type="search" placeholder="Search" [(ngModel)]="searchText" name="searchText"> -->
+
+<!-- 
+        <input class="form-control" type="search" placeholder="Search"  [value]="searchText"  name="searchText" #inputValue>
+        <input  class="btn btn-outline-success" type="submit" value="searchText" (click)="searchTextShow(inputValue)">
+        -->
+        <!-- <button class="btn btn-outline-success">LogOut</button> -->
+     
+      <!-- </form>
+      <p>{{searchText}}</p> -->
+    </div>
+    </nav>
+    <router-outlet></router-outlet> 
+    <ng-content></ng-content>
+  
+
+ 
