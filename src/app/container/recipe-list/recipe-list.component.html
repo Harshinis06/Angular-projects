@@ -1,0 +1,13 @@
+<div class="container">
+<div class="card" style="width: 18rem;" *ngFor="let recip of Recipe">
+    <img [src]="recip.imgURL" class="card-img" alt="..." >
+    <div class="card-body">
+      <h5 class="card-title">{{recip.name}}</h5>
+      <p class="card-text">preparationTime {{recip.preparationTime}}</p>
+      <p class="card-text">servingSize {{recip.servingSize}}</p>
+      <p class="card-text">cuisineType {{recip.cuisineType}}</p>
+      <a  class="btn btn-outline-success" (click)="allRecipies(recip)" >View More</a>
+    </div>
+  </div>
+</div>
+
