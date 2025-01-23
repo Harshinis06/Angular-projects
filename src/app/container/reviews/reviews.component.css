@@ -1,0 +1,19 @@
+.container{
+   justify-content: center;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+.card-text-category{
+    margin-top: 15vw;
+    background-color:beige;
+    border-radius: 10px;
+    /* margin-left: 5vw; */
+    /* text-align: center; */
+    padding: 10px;
+}
+ .closeMark{
+    margin-right: 0;
+ }
