@@ -1,0 +1,58 @@
+<!-- <div class="container">
+<div class="card" *ngFor="let review of allRecipe.reviews">
+    <div class="card-title">
+        
+    </div>        
+</div>
+</div>
+
+ -->
+<div class="container" *ngIf=" allRecipe ">
+    <div class="card"  [ngClass]="{'hidden':isCardVisible}"  [ngStyle]="{'width' :allRecipe.name.length > 12 ? 'auto' : '40rem'} ">
+        <div class="card-img-container">
+            
+            <img [src]="allRecipe.imgURL" class="card-img-top" alt="{{allRecipe.name}}">
+            <button class="btn btn-close closeMark" (click)="toggleClose()" style='font-size:20px;'>&#9932;</button>
+          </div>
+        <div class="card-body">
+        <h5 ngClass="card-title" >{{allRecipe.name}}</h5>
+        <p class="card-text-desc">{{allRecipe.description}}</p>
+        <div class="divition-1">
+            <p [ngClass]="{'card-text badge text-bg-info':allRecipe.difficultyLevel==='Easy',
+            'card-text badge text-bg-warning':allRecipe.difficultyLevel==='Medium',
+            'card-text badge text-bg-danger':allRecipe.difficultyLevel==='Hard'}">{{allRecipe.difficultyLevel}}</p>
+        
+        <p class="card-text-Rating" ><strong>Rating: </strong>{{allRecipe.rating}}</p>
+        <p class="card-text-tags" *ngFor="let tags of allRecipe.tags">{{tags}}</p>
+
+        
+        </div>
+        <div class="divition-2">
+        <ul class="card-ingredients"><strong>Ingredients: </strong>
+            <li *ngFor="let ingredient of allRecipe.ingredients">{{ingredient}}</li>
+          </ul>
+          <p class="card-text-cookingTime" *ngIf="allRecipe.cookingTime!='N/A' "><strong>cookingTime: </strong>{{allRecipe.cookingTime}}</p>
+          <p class="card-text-category"><strong>category: </strong>{{allRecipe.category}}</p>
+      
+          </div>
+          <div class ="card-text-steps">
+          <p *ngFor="let review of allRecipe.steps">
+            <strong>Step {{review.stepNumber}} </strong> 
+             {{review.instruction}} </p>
+            </div>
+          <!-- <p class="card-text-category" *ngFor="let review of allRecipe.reviews">
+            <strong>Reviewer:</stro ng> {{review.username}} <br>
+            <strong>Rating:</strong> {{review.rating}} <br>
+            <strong>Comment:</strong> {{review.comment}} </p> -->
+        </div>
+        <button class="btn btn-warning" (click)="reviews(allRecipe.reviews)">Reviews</button>
+        <div class="reviewscontain">
+          <app-reviews></app-reviews>
+        </div>
+    </div>      
+   
+</div>
+
+
+
+    
